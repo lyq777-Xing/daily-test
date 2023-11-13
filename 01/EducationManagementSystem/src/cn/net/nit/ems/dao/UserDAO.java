@@ -276,7 +276,6 @@ public class UserDAO {
 	public boolean delete(int userId){
 		String sql = "DELETE FROM UserInfo WHERE UserID=?";
 		PreparedStatement ps = null;
-		ResultSet rs = null;
 		try {
 			connection = DBUtil.getConnection();
 			if (connection == null)
