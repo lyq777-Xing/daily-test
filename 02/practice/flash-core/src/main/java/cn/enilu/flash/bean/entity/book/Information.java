@@ -52,6 +52,10 @@ public class Information extends BaseEntity {
     private String publishingHouse;
     @Column(columnDefinition = "BIGINT COMMENT '类别ID'")
     private Long typeid;
+    @Column(columnDefinition = "INT COMMENT '借阅状态:1、借出，2、未借出'")
+    private Integer status;
+    @Column(columnDefinition = "BIGINT COMMENT '借阅人'")
+    private Long lendid;
 
 
 }

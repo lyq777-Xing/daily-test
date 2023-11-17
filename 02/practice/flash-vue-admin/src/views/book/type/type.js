@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       formVisible: false,
-      formTitle: '添加书籍信息',
+      formTitle: '添加分类信息',
       isAdd: true,
       form: {
         name:'',

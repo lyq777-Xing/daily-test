@@ -65,7 +65,7 @@
           {{scope.row.name}}
         </template>
       </el-table-column>
-      <el-table-column label="创建人">
+      <!-- <el-table-column label="创建人">
         <template slot-scope="scope">
           {{scope.row.createBy}}
         </template>
@@ -84,7 +84,7 @@
         <template slot-scope="scope">
           {{scope.row.modifyTime}}
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column label="作者">
         <template slot-scope="scope">
           {{scope.row.author}}
@@ -127,17 +127,25 @@
           {{scope.row.typeid}}
         </template>
       </el-table-column>
+      <el-table-column label="借阅状态">
+        <template slot-scope="scope">
+          <el-tag type="danger" v-if="scope.row.status == 1">已借出</el-tag>
+          <el-tag type="success" v-else>未借出</el-tag>
+        </template>
+      </el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button
             type="text"
             size="mini"
             @click.native="lendItem(scope.row)"
+            v-if="scope.row.status == 2"
           >借阅图书</el-button>
           <el-button
             type="text"
             size="mini"
             @click.native="backItem(scope.row)"
+            v-else
           >归还图书</el-button>
         </template>
       </el-table-column>

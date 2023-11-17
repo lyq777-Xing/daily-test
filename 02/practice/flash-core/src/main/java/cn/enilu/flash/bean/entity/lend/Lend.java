@@ -36,4 +36,6 @@ public class Lend extends BaseEntity {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(columnDefinition = "DATETime COMMENT '归还时间'")
     private Date returnTime;
+    @Column(columnDefinition = "BIGINT COMMENT '借阅人'")
+    private Long lendid;
 }

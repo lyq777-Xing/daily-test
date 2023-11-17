@@ -23,7 +23,9 @@ export default {
         publicationDate:'',
         publishingHouse:'',
         typeid:'',
-        id: ''
+        id: '',
+        status:'',
+        lendid:''
       },
       listQuery: {
         page: 1,
@@ -144,7 +146,9 @@ export default {
         publicationDate:'',
         publishingHouse:'',
         typeid:'',
-        id: ''
+        id: '',
+        status:'',
+        lendid:''
       }
     },
     add() {
@@ -162,6 +166,7 @@ export default {
       this.$refs['form'].validate((valid) => {
         if (valid) {
             const formData = th.form
+            formData.status = 2
             console.log("form....");
             if(formData.id){
                 studentApi.update(formData).then(response => {

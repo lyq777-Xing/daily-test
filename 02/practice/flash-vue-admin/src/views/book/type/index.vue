@@ -160,6 +160,7 @@
             <el-form-item label="最后更新人">
               <el-input
                 v-model="form.modifyBy"
+                disabled
                 minlength=1
               ></el-input>
             </el-form-item>
@@ -169,17 +170,9 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="图书ID">
+            <el-form-item label="排序">
               <el-input
-                v-model="form.bookid"
-                minlength=1
-              ></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="12">
-            <el-form-item label="归还时间">
-              <el-input
-                v-model="form.returnTime"
+                v-model="form.num"
                 minlength=1
               ></el-input>
             </el-form-item>

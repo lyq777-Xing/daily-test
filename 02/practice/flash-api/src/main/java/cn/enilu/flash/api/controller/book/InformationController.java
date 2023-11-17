@@ -16,7 +16,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
 
 /**
@@ -69,6 +72,9 @@ public class InformationController extends BaseController {
                 informationService.update(information);
             }
         }*/
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+        Long idUser = getIdUser(request);
+        information.setModifyBy(idUser);
         informationService.update(information);
         return Rets.success();
     }
@@ -81,10 +87,15 @@ public class InformationController extends BaseController {
     @PostMapping
     @BussinessLog(value = "新增书籍信息", key = "name")
     public Ret add(@ModelAttribute Information information){
+//        随机生成编码
         UUID uuid = UUID.randomUUID();
         String uuidStr = CharMatcher.is('-').removeFrom(uuid.toString());
 //        System.out.println("UUID：" + uuidStr);
         information.setNumber("N" + uuidStr);
+//        添加创建人
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+        Long idUser = getIdUser(request);
+        information.setCreateBy(idUser);
         informationService.insert(information);
         return Rets.success();
     }

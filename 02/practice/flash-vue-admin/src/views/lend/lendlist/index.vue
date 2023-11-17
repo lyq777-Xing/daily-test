@@ -61,12 +61,12 @@
       <!-- :default-sort = "{prop: 'num', order: 'descending'}" -->
       <el-table-column type="index">
       </el-table-column>
-      <el-table-column label="分类名称">
+      <!-- <el-table-column label="分类名称">
         <template slot-scope="scope">
           {{scope.row.name}}
         </template>
-      </el-table-column>
-      <el-table-column label="创建人">
+      </el-table-column> -->
+      <el-table-column label="借阅者">
         <template slot-scope="scope">
           {{scope.row.createBy}}
         </template>
@@ -76,7 +76,7 @@
           {{scope.row.createTime}}
         </template>
       </el-table-column>
-      <el-table-column label="最后更新人">
+      <!-- <el-table-column label="最后更新人">
         <template slot-scope="scope">
           {{scope.row.modifyBy}}
         </template>
@@ -85,7 +85,7 @@
         <template slot-scope="scope">
           {{scope.row.modifyTime}}
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column label="图书ID" prop="bookid">
         <template slot-scope="scope">
           {{scope.row.bookid}}

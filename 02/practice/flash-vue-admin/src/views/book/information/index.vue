@@ -127,6 +127,18 @@
           {{scope.row.typeid}}
         </template>
       </el-table-column>
+      <el-table-column label="借阅状态">
+        <template slot-scope="scope">
+          <el-tag type="danger" v-if="scope.row.status == 1">已借出</el-tag>
+          <el-tag type="success" v-else>未借出</el-tag>
+        </template>
+      </el-table-column>
+      <el-table-column label="借阅者">
+        <template slot-scope="scope">
+          <el-tag type="success" v-if="scope.row.lendid == null">无人借阅</el-tag>
+          <el-tag type="warning" v-else>{{scope.row.lendid}}</el-tag>
+        </template>
+      </el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button
@@ -275,6 +287,24 @@
             <el-form-item label="类别ID" prop="typeid">
               <el-input
                 v-model="form.typeid"
+                minlength=1
+              ></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="借阅状态" prop="status">
+              <el-input
+                v-model="form.status"
+                minlength=1
+                disabled
+              ></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="借阅者" prop="lendid">
+              <el-input
+                v-model="form.lendid"
+                disabled
                 minlength=1
               ></el-input>
             </el-form-item>

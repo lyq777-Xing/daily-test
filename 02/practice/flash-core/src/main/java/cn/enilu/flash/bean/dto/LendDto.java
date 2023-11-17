@@ -22,4 +22,6 @@ public class LendDto {
     private Date modifyTime;
     private Long bookid;
     private Date returnTime;
+    private Long lendid;
+
 }

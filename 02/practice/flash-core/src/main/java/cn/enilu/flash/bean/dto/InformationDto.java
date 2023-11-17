@@ -28,6 +28,8 @@ public class InformationDto extends BaseEntity {
     private String publicationDate;
     private String publishingHouse;
     private Long typeid;
+    private Integer status;
+    private Long lendid;
 
 
 }

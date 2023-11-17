@@ -23,7 +23,9 @@ export default {
         publicationDate:'',
         publishingHouse:'',
         typeid:'',
-        id: ''
+        id: '',
+        status:'',
+        lendid:''
       },
       listQuery: {
         page: 1,
@@ -52,6 +54,17 @@ export default {
         language: [
           { required: true, message: '请选择语言', trigger: 'blur' },
         ],
+      },
+      // 添加借阅数据的对象
+      lendData:{
+        name:'',
+        createBy:'',
+        createTime:'',
+        modifyBy:'',
+        modifyTime:'',
+        id: '',
+        bookid:'',
+        returnTime:'',
       }
     }
   },
@@ -144,7 +157,9 @@ export default {
         publicationDate:'',
         publishingHouse:'',
         typeid:'',
-        id: ''
+        id: '',
+        status:'',
+        lendid:''
       }
     },
     add() {
@@ -169,34 +184,72 @@ export default {
       return false
     },
 
-    // removeItem(record){
-    //   this.selRow = record
-    //   this.remove()
-    // },
-    // remove() {
-    //   if (this.checkSel()) {
-    //     var id = this.selRow.id
-    //     this.$confirm(this.$t('common.deleteConfirm'), this.$t('common.tooltip'), {
-    //       confirmButtonText: this.$t('button.submit'),
-    //       cancelButtonText: this.$t('button.cancel'),
-    //       type: 'warning'
-    //     }).then(() => {
-    //         studentApi.remove(id).then(response => {
-    //         this.$message({
-    //           message: this.$t('common.optionSuccess'),
-    //           type: 'success'
-    //         })
-    //         this.fetchData()
-    //       }).catch( err=> {
-    //         this.$notify.error({
-    //           title: '错误',
-    //           message: err
-    //         })
-    //       })
-    //     }).catch(() => {
-    //     })
-    //   }
-    // }
+    lendItem(record){
+      this.selRow = record
+      this.lend()
+    },
+    lend() {
+      if (this.checkSel()) {
+        const data = this.selRow
+        this.$confirm("您确认借阅该图书？", this.$t('common.tooltip'), {
+          confirmButtonText: this.$t('button.submit'),
+          cancelButtonText: this.$t('button.cancel'),
+          type: 'warning'
+        }).then(() => {
+          data.status = 1
+          studentApi.update(data).then(response => {
+            this.lendData.bookid = this.selRow.id;
+            studentApi.add(this.lendData).then(response => {
+              this.$message({
+                  message: this.$t('common.optionSuccess'),
+                  type: 'success'
+              })
+              this.fetchData()
+            })
+          }).catch( err=> {
+            this.$notify.error({
+              title: '错误',
+              message: err
+            })
+          })
+          
+        }).catch(() => {
+        })
+      }
+    },
+    backItem(record){
+      this.selRow = record
+      this.back()
+    },
+    back() {
+      if (this.checkSel()) {
+        const data = this.selRow
+        var id = this.selRow.id
+        this.$confirm("您确认归还该图书？", this.$t('common.tooltip'), {
+          confirmButtonText: this.$t('button.submit'),
+          cancelButtonText: this.$t('button.cancel'),
+          type: 'warning'
+        }).then(() => {
+            data.status = 2
+            console.log(data);
+            studentApi.update(data).then(response => {
+              studentApi.updateLend(data.id).then(response => {
+                  this.$message({
+                      message: this.$t('common.optionSuccess'),
+                      type: 'success'
+                  })
+                  this.fetchData()
+              })
+          }).catch( err=> {
+            this.$notify.error({
+              title: '错误',
+              message: err
+            })
+          })
+        }).catch(() => {
+        })
+      }
+    }
 
   }
 }
