@@ -18,6 +18,7 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 /**
  * ApiApplication
@@ -44,7 +45,6 @@ public class ApiApplication extends SpringBootServletInitializer {
 //    public PlatformTransactionManager transactionManager(DataSource dataSource) {
 //        return new DataSourceTransactionManager(dataSource);
 //    }
-
     public static void main(String[] args) throws UnknownHostException {
         ConfigurableApplicationContext application = SpringApplication.run(ApiApplication.class, args);
         Environment env = application.getEnvironment();

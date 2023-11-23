@@ -89,9 +89,11 @@ public class InformationController extends BaseController {
     public Ret add(@ModelAttribute Information information){
 //        随机生成编码
         UUID uuid = UUID.randomUUID();
-        String uuidStr = CharMatcher.is('-').removeFrom(uuid.toString());
+
+//        String uuidStr = CharMatcher.is('-').removeFrom(uuid.toString());
 //        System.out.println("UUID：" + uuidStr);
-        information.setNumber("N" + uuidStr);
+        String randomUUID = uuid.toString().replaceAll("-","").substring(0,16);
+        information.setNumber("N" + randomUUID);
 //        添加创建人
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
         Long idUser = getIdUser(request);
