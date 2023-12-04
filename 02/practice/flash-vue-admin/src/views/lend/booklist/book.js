@@ -232,7 +232,6 @@ export default {
         }).then(() => {
             data.status = 2
             console.log(data);
-            data.lendid = null;
             studentApi.update(data).then(response => {
               studentApi.updateLend(data.id).then(response => {
                   this.$message({

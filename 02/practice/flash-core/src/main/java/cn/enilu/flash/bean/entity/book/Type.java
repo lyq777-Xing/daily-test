@@ -33,5 +33,4 @@ public class Type extends BaseEntity {
     private String name;
     @Column(columnDefinition = "INTEGER COMMENT '排序'")
     private Integer num;
-
 }

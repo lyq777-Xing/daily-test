@@ -192,7 +192,6 @@
           <el-col :span="12">
             <el-form-item label="创建人"  prop="createBy">
               <el-input
-                disabled
                 v-model="form.createBy"
                 minlength=1
               ></el-input>
