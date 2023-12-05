@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f78d330-9841-4f6d-b73c-473a5e2e1a5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9f7ee316-954e-4f87-80d6-fd707882cfa3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -30,14 +28,12 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="D:/maven/apache-maven-3.8.6" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="D:\maven\apache-maven-3.8.6\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="17" />
-  </component>
-  <component name="ProjectId" id="2Z54cuiW7htwdKrTKud3NTquMOY" />
+  <component name="ProjectId" id="2Xtm1ct88hwxalYyQJ4jWYRBqJ3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -51,30 +47,32 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/实验室/代码/03/big-event&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/实验室/代码/02/practice&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3707e6271060b742b7a95e757b80c125&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e07822fc2f6c9a64c58a119104d5bd1a&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\实验室\代码\03\big-event\src\main\java\cn\nbt\pojo" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cn.enilu.flash.service.book" />
+      <recent name="cn.enilu.flash.dao.book" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.enilu.flash.bean.dto" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="BigEventApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="big-event" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.nbt.BigEventApplication" />
+    <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="flash-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.enilu.flash.api.ApiApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.nbt.*" />
+          <option name="PATTERN" value="cn.enilu.flash.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,44 +82,40 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BigEventApplication" />
+        <item itemvalue="Spring Boot.ApiApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\16618\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3f78d330-9841-4f6d-b73c-473a5e2e1a5e" name="Changes" comment="" />
-      <created>1701698691346</created>
+      <changelist id="9f7ee316-954e-4f87-80d6-fd707882cfa3" name="Changes" comment="" />
+      <created>1699456540085</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1701698691346</updated>
-      <workItem from="1701698692620" duration="3221000" />
-      <workItem from="1701704330975" duration="76000" />
-      <workItem from="1701704797379" duration="35000" />
-      <workItem from="1701704860595" duration="21000" />
+      <updated>1699456540085</updated>
+      <workItem from="1699456541319" duration="498000" />
+      <workItem from="1699681759269" duration="600000" />
+      <workItem from="1699768487261" duration="5790000" />
+      <workItem from="1699785463207" duration="7888000" />
+      <workItem from="1699798441854" duration="1035000" />
+      <workItem from="1699799501040" duration="13336000" />
+      <workItem from="1699840223792" duration="6266000" />
+      <workItem from="1699867661529" duration="4841000" />
+      <workItem from="1700240123298" duration="3119000" />
+      <workItem from="1700295399305" duration="42000" />
+      <workItem from="1700296445398" duration="1597000" />
+      <workItem from="1700697025245" duration="4277000" />
+      <workItem from="1700730148824" duration="65000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/practice$ApiApplication.ic" NAME="ApiApplication Coverage Results" MODIFIED="1699785490473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cn.enilu.flash.api.*</FILTER>
+    </SUITE>
   </component>
 </project>
