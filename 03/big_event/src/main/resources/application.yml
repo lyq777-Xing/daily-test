@@ -1,3 +1,7 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
 spring:
   datasource:
     username: root
@@ -11,7 +15,24 @@ mybatis:
 logging:
   # 配置日志文件存储位置
   file:
-    path: /Users/gwf/IdeaProjects/exam/log
+    path: /log
   # 给dao层设置日志输出等级，设为debug后就可以再控制台看到 sql 输出语句
   level:
     cn.nbt.pojo: debug
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+#  api-docs:
+#    path: /
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: cn.nbt
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
