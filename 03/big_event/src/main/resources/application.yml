@@ -7,5 +7,11 @@ spring:
 mybatis:
   configuration:
 #    驼峰命名
-    map-underscore-to-camel-case:  true
-
+    map-underscore-to-camel-case: true
+logging:
+  # 配置日志文件存储位置
+  file:
+    path: /Users/gwf/IdeaProjects/exam/log
+  # 给dao层设置日志输出等级，设为debug后就可以再控制台看到 sql 输出语句
+  level:
+    cn.nbt.pojo: debug

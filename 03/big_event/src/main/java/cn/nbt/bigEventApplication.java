@@ -1,5 +1,6 @@
 package cn.nbt;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 启动类
  */
 @SpringBootApplication
+@Slf4j
 public class bigEventApplication {
     public static void main(String[] args) {
         System.out.println("hello~");
