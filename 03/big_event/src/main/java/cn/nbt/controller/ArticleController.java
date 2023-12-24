@@ -2,6 +2,11 @@ package cn.nbt.controller;
 
 import cn.nbt.pojo.Result;
 import cn.nbt.utils.JwtUtil;
+import com.github.xiaoymin.knife4j.annotations.ApiSupport;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -16,19 +21,13 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/article")
+@Tag(name = "ArticleController")
+@ApiSupport(author = "1661898579@qq.com",order = 2)
 public class ArticleController {
-
+    @Operation(summary = "list")
     @GetMapping("/list")
     public Result<String> list(){
-/*        try {
-//          验证token
-            Map<String, Object> claims = JwtUtil.parseToken(token);
-            return Result.success("所有的文章数据");
-        }catch (Exception e){
-//            状态码为401
-            response.setStatus(401);
-            return Result.error("未登录");
-        }*/
+
         return Result.success("所有的文章数据");
     }
 }

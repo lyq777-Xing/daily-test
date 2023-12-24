@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b7fcd3b-dc15-4bf0-9cce-350e74e021cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/cn/net/nit/ems/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/net/nit/ems/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "last_directory_selection": "E:/实验室/代码/01/EducationManagementSystem/test/cn/net/nit/ems",
-    "last_opened_file_path": "E:/实验室/代码/02/practice",
+    "last_opened_file_path": "E:/实验室/demo/03/big_event",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -143,6 +143,7 @@
       <workItem from="1699004375768" duration="483000" />
       <workItem from="1699096654842" duration="10800000" />
       <workItem from="1699456466457" duration="68000" />
+      <workItem from="1703249611099" duration="571000" />
     </task>
     <servers />
   </component>
