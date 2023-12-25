@@ -55,4 +55,10 @@ public class CategoryController {
         return Result.success();
     }
 
+    @Operation(summary = "删除文章分类")
+    @DeleteMapping
+    public Result delete(@RequestParam Integer id){
+        categoryService.delete(id);
+        return Result.success();
+    }
 }
