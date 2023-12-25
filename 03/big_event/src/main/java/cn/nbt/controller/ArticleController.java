@@ -1,6 +1,7 @@
 package cn.nbt.controller;
 
 import cn.nbt.pojo.Article;
+import cn.nbt.pojo.PageBean;
 import cn.nbt.pojo.Result;
 import cn.nbt.service.ArticleService;
 import cn.nbt.utils.JwtUtil;
@@ -35,4 +36,17 @@ public class ArticleController {
         articleService.add(article);
         return Result.success();
     }
+
+    @Operation(summary = "获取文章分页列表")
+    @GetMapping
+    public Result<PageBean<Article>> list(
+            Integer pageNum,
+            Integer pageSize,
+            @RequestParam(required = false) Integer categoryId,
+            @RequestParam(required = false) String state
+    ){
+        PageBean<Article> pb = articleService.list(pageNum,pageSize,categoryId,state);
+        return Result.success(pb);
+    }
+
 }
