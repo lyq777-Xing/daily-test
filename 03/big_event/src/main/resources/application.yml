@@ -2,16 +2,23 @@ server:
   port: 8080
   servlet:
     context-path: /
+
 spring:
   datasource:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/big_event
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
 mybatis:
   configuration:
 #    驼峰命名
     map-underscore-to-camel-case: true
+
 logging:
   # 配置日志文件存储位置
   file:
@@ -20,6 +27,7 @@ logging:
   level:
     cn.nbt.pojo: debug
   config: classpath:logback-spring.xml
+
 # springdoc-openapi项目配置
 springdoc:
   swagger-ui:
@@ -32,6 +40,7 @@ springdoc:
     - group: 'default'
       paths-to-match: '/**'
       packages-to-scan: cn.nbt
+
 # knife4j的增强配置，不需要增强可以不配
 knife4j:
   enable: true

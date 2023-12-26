@@ -3,6 +3,7 @@ package cn.nbt.controller;
 import cn.nbt.pojo.Result;
 import cn.nbt.utils.AliOssUtil;
 import com.github.xiaoymin.knife4j.annotations.ApiSupport;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ import java.util.UUID;
 @ApiSupport(author = "1661898579@qq.com",order = 4)
 public class FileUploadController {
 
+    @Operation(summary = "文件上传")
     @PostMapping("/upload")
     public Result<String> upload(MultipartFile file) throws IOException {
         String originalFilename = file.getOriginalFilename();

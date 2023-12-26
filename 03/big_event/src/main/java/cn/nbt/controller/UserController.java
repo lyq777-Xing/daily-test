@@ -15,12 +15,15 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.URL;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author lyq
@@ -36,6 +39,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Operation(summary = "register")
     @Parameters({
@@ -76,6 +82,8 @@ public class UserController {
             claims.put("id",user.getId());
             claims.put("username",user.getUsername());
             String token = JwtUtil.genToken(claims);
+            ValueOperations<String, String> stringStringValueOperations = stringRedisTemplate.opsForValue();
+            stringStringValueOperations.set(token,token,1, TimeUnit.HOURS);
             return Result.success(token);
         }
         return Result.error("密码错误");
@@ -116,12 +124,12 @@ public class UserController {
         return Result.success();
     }
 
-    @Operation(summary = "updatePad")
+    @Operation(summary = "updatePwd")
     @Parameters({
             @Parameter(name = "params",description = "密码",required = true),
     })
-    @PatchMapping("/updatePad")
-    public Result updatePad(@RequestBody Map<String,String> params){
+    @PatchMapping("/updatePwd")
+    public Result updatePad(@RequestBody Map<String,String> params,@RequestHeader("Authorization") String token){
 //        校验参数
         String oldPwd = params.get("old_pwd");
         String newPwd = params.get("new_pwd");
@@ -143,6 +151,9 @@ public class UserController {
             return Result.error("两次填写的更新密码不一致");
         }
         userService.updatePwd(newPwd);
+//        删除redis中的token
+        ValueOperations<String, String> stringStringValueOperations = stringRedisTemplate.opsForValue();
+        stringStringValueOperations.getOperations().delete(token);
         return Result.success();
     }
 
