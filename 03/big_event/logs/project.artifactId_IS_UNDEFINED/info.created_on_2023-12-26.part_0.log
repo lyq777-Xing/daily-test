@@ -1,0 +1,33 @@
+2023-12-26 18:55:23 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | Starting bigEventApplication using Java 17.0.7 with PID 23556 (E:\实验室\demo\03\big_event\target\classes started by 16618 in E:\实验室\demo\03\big_event)
+2023-12-26 18:55:23 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | No active profile set, falling back to 1 default profile: "default"
+2023-12-26 18:55:24 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.embedded.tomcat.TomcatWebServer[0;39m | Tomcat initialized with port(s): 8080 (http)
+2023-12-26 18:55:24 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.StandardService[0;39m | Starting service [Tomcat]
+2023-12-26 18:55:24 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.StandardEngine[0;39m | Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-12-26 18:55:24 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][0;39m | Initializing Spring embedded WebApplicationContext
+2023-12-26 18:55:24 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.servlet.context.ServletWebServerApplicationContext[0;39m | Root WebApplicationContext: initialization completed in 890 ms
+2023-12-26 18:55:25 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.embedded.tomcat.TomcatWebServer[0;39m | Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-26 18:55:25 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | Started bigEventApplication in 2.238 seconds (process running for 2.744)
+2023-12-26 18:55:31 | [34mINFO [0;39m | [1;33mhttp-nio-8080-exec-2[0;39m | [1;32morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][0;39m | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-26 18:55:31 | [34mINFO [0;39m | [1;33mhttp-nio-8080-exec-2[0;39m | [1;32morg.springframework.web.servlet.DispatcherServlet[0;39m | Initializing Servlet 'dispatcherServlet'
+2023-12-26 18:55:31 | [34mINFO [0;39m | [1;33mhttp-nio-8080-exec-2[0;39m | [1;32morg.springframework.web.servlet.DispatcherServlet[0;39m | Completed initialization in 1 ms
+2023-12-26 18:59:05 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | Starting bigEventApplication using Java 17.0.7 with PID 27076 (E:\实验室\demo\03\big_event\target\classes started by 16618 in E:\实验室\demo\03\big_event)
+2023-12-26 18:59:05 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | No active profile set, falling back to 1 default profile: "default"
+2023-12-26 18:59:05 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.embedded.tomcat.TomcatWebServer[0;39m | Tomcat initialized with port(s): 8080 (http)
+2023-12-26 18:59:06 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.StandardService[0;39m | Starting service [Tomcat]
+2023-12-26 18:59:06 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.StandardEngine[0;39m | Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-12-26 18:59:06 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][0;39m | Initializing Spring embedded WebApplicationContext
+2023-12-26 18:59:06 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.servlet.context.ServletWebServerApplicationContext[0;39m | Root WebApplicationContext: initialization completed in 896 ms
+2023-12-26 18:59:07 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.embedded.tomcat.TomcatWebServer[0;39m | Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-26 18:59:07 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | Started bigEventApplication in 2.366 seconds (process running for 2.892)
+2023-12-26 18:59:10 | [34mINFO [0;39m | [1;33mhttp-nio-8080-exec-2[0;39m | [1;32morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][0;39m | Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-26 18:59:10 | [34mINFO [0;39m | [1;33mhttp-nio-8080-exec-2[0;39m | [1;32morg.springframework.web.servlet.DispatcherServlet[0;39m | Initializing Servlet 'dispatcherServlet'
+2023-12-26 18:59:10 | [34mINFO [0;39m | [1;33mhttp-nio-8080-exec-2[0;39m | [1;32morg.springframework.web.servlet.DispatcherServlet[0;39m | Completed initialization in 1 ms
+2023-12-26 19:08:35 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | Starting bigEventApplication using Java 17.0.7 with PID 23892 (E:\实验室\demo\03\big_event\target\classes started by 16618 in E:\实验室\demo\03\big_event)
+2023-12-26 19:08:35 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | No active profile set, falling back to 1 default profile: "default"
+2023-12-26 19:08:36 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.embedded.tomcat.TomcatWebServer[0;39m | Tomcat initialized with port(s): 8080 (http)
+2023-12-26 19:08:36 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.StandardService[0;39m | Starting service [Tomcat]
+2023-12-26 19:08:36 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.StandardEngine[0;39m | Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-12-26 19:08:36 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/][0;39m | Initializing Spring embedded WebApplicationContext
+2023-12-26 19:08:36 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.servlet.context.ServletWebServerApplicationContext[0;39m | Root WebApplicationContext: initialization completed in 941 ms
+2023-12-26 19:08:37 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32morg.springframework.boot.web.embedded.tomcat.TomcatWebServer[0;39m | Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-26 19:08:37 | [34mINFO [0;39m | [1;33mmain[0;39m | [1;32mcn.nbt.bigEventApplication[0;39m | Started bigEventApplication in 2.508 seconds (process running for 3.018)

@@ -19,6 +19,7 @@ logging:
   # 给dao层设置日志输出等级，设为debug后就可以再控制台看到 sql 输出语句
   level:
     cn.nbt.pojo: debug
+  config: classpath:logback-spring.xml
 # springdoc-openapi项目配置
 springdoc:
   swagger-ui:
