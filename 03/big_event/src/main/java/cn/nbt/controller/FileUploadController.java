@@ -1,6 +1,7 @@
 package cn.nbt.controller;
 
 import cn.nbt.pojo.Result;
+import cn.nbt.utils.AliOssUtil;
 import com.github.xiaoymin.knife4j.annotations.ApiSupport;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +26,8 @@ public class FileUploadController {
         String originalFilename = file.getOriginalFilename();
 //        保证名字的唯一性 防止文件覆盖
         String fileName = UUID.randomUUID().toString() + originalFilename.substring(originalFilename.lastIndexOf("."));
-        file.transferTo(new File("E:\\实验室\\demo\\03\\big_event\\files\\" + fileName));
-        return Result.success("url访问地址");
+//        file.transferTo(new File("E:\\实验室\\demo\\03\\big_event\\files\\" + fileName));
+        String url = AliOssUtil.uploadFile(fileName, file.getInputStream());
+        return Result.success(url);
     }
 }
